@@ -38,6 +38,42 @@ function config(
     ],
   });
 
+  plop.setGenerator("hook", {
+    description: "A hook generator for the project",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Enter hook name: ",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "app/hooks/{{camelCase name}}.tsx",
+        templateFile: "templates/hooks.hbs",
+      },
+    ],
+  });
+
+  plop.setGenerator("lib", {
+    description: "A lib generator for the project",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Enter lib name: ",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "app/lib/{{camelCase name}}.tsx",
+        templateFile: "templates/lib.hbs",
+      },
+    ],
+  });
+
   plop.setWelcomeMessage(
     "Welcome to the generator. Run with -- " +
       "to bypass prompts and use argv: `plop <generator-name> -- --name=example`",
