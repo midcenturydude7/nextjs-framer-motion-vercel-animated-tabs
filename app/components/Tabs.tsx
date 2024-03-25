@@ -16,22 +16,22 @@ export default function Tabs() {
       {
         label: "Overview",
         children: <Overview />,
-        id: Math.random().toString(),
+        id: "Overview",
       },
       {
         label: "Integrations",
         children: <Integrations />,
-        id: Math.random().toString(),
+        id: "Integrations",
       },
       {
         label: "Activity",
         children: <Activity />,
-        id: Math.random().toString(),
+        id: "Activity",
       },
       {
         label: "Domains",
         children: <Domains />,
-        id: Math.random().toString(),
+        id: "Domains",
       },
     ],
     initialTabId: "Matches",

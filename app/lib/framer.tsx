@@ -5,8 +5,6 @@ import React from "react";
 import { Tab } from "../hooks/useTabs";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
-import JSXStyle from "styled-jsx/style";
-import { LegacyRef } from "react";
 
 const transition = {
   type: "tween",
